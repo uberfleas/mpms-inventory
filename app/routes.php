@@ -15,3 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+//Artobj Route
+Route::resource('artobjs', 'ArtobjController');
