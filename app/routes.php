@@ -13,8 +13,16 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('pages.home');
 });
+
+//--- Routes for the Art Object Set
 
 //Artobj Route
 Route::resource('artobjs', 'ArtobjController');
+
+//Medium Route
+Route::resource('mediums', 'MediumController');
+
+//Genre Route
+Route::resource('genres', 'GenreController');

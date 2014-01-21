@@ -1,6 +1,6 @@
 <?php
 
-class ArtobjController extends \BaseController {
+class MediumController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,12 +9,13 @@ class ArtobjController extends \BaseController {
 	 */
 	public function index()
 	{
-		//get all the art objects
-		$artobjs = Artobj::all();
+		//
+		//get all the mediums
+		$mediums = Medium::all();
 		
 		//load the view and pass the artobjs
-		return View::make('artobjs.index')
-			->with('artobjs', $artobjs);
+		return View::make('mediums.index')
+			->with('mediums', $mediums);
 	}
 
 	/**
@@ -25,7 +26,7 @@ class ArtobjController extends \BaseController {
 	public function create()
 	{
 		//load a form to make an artobj
-		return View::make('artobjs.create');
+		return View::make('mediums.create');
 	}
 
 	/**
@@ -36,37 +37,25 @@ class ArtobjController extends \BaseController {
 	public function store()
 	{
 		// validate
-		// read more on validation at http://laravel.com/docs/validation
-		$rules = array(
-			'name'       	=> 'required',
-			'medium_id'  	=> 'required|numeric',
-			'date_completed'=> 'required|date_format:d-m-Y',
-			'medium_values'	=> 'required',
-			'commission_id'	=> 'numeric',
-			'tagline'		=> 'required'
-		);
-		
-		$validator = Validator::make(Input::all(), $rules);
+		$validator = Validator::make(Input::all(), Medium::$rules);
 		
 		// process the login
 		if ($validator->fails()) {
-			return Redirect::to('artobjs/create')
+			return Redirect::to('mediums/create')
 				->withErrors($validator)
 				->withInput(Input::all());
 		} else {
 			// store
-			$artobj = new Artobj;
-			$artobj->name       		= Input::get('name');
-			$artobj->medium_id			= Input::get('medium_id');
-			$artobj->date_completed 	= Input::get('date_completed');
-			$artobj->medium_values		= Input::get('medium_values');
-			$artobj->commission_id		= Input::get('commission_id');
-			$artobj->tagline			= Input::get('tagline');
-			$artobj->save();
+			$medium = new Medium;
+			$medium->name       		= Input::get('name');
+			$medium->description		= Input::get('description');
+			$medium->characteristics 	= Input::get('characteristics');
+			
+			$medium->save();
 		
 			// redirect
-			Session::flash('message', 'Successfully created '.$artobj->name.'!');
-			return Redirect::to('artobjs');
+			Session::flash('message', 'Successfully created '.$medium->name.'!');
+			return Redirect::to('mediums');
 		}
 	}
 
