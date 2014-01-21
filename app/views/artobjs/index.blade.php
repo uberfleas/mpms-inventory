@@ -2,17 +2,12 @@
 @section('content')
 	<h1>All the Art Objects</h1>
 	
-	@if (Session::has('message'))
-		<div class="alert alert-info">{{ Session::get('message') }}</div>
-	@endif
-	
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
 				<td>ID</td>
 				<td>Name</td>
 				<td>Medium ID</td>
-				<td>Genre ID List</td>
 				<td>Date Completed</td>
 				<td>Medium List</td>
 				<td>Commission ID</td>
@@ -25,7 +20,6 @@
 				<td>{{ $value->id }}</td>
 				<td>{{ $value->name }}</td>
 				<td>{{ $value->medium_id }}</td>
-				<td>{{ $value->genre_id_list }}</td>
 				<td>{{ $value->date_completed }}</td>
 				<td>{{ $value->medium_values }}</td>
 				<td>{{ $value->commission_id }}</td>

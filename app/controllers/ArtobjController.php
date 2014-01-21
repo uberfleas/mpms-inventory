@@ -24,7 +24,8 @@ class ArtobjController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		//load a form to make an artobj
+		return View::make('artobjs.create');
 	}
 
 	/**
@@ -34,7 +35,39 @@ class ArtobjController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// validate
+		// read more on validation at http://laravel.com/docs/validation
+		$rules = array(
+			'name'       	=> 'required',
+			'medium_id'  	=> 'required|numeric',
+			'date_completed'	=> 'required|date_format:d-m-Y',
+			'medium_values'	=> 'required',
+			'commission_id'	=> 'numeric',
+			'tagline'		=> 'required'
+		);
+		
+		$validator = Validator::make(Input::all(), $rules);
+		
+		// process the login
+		if ($validator->fails()) {
+			return Redirect::to('artobjs/create')
+				->withErrors($validator)
+				->withInput(Input::all());
+		} else {
+			// store
+			$artobj = new Artobj;
+			$artobj->name       		= Input::get('name');
+			$artobj->medium_id		= Input::get('medium_id');
+			$artobj->date_completed 	= Input::get('date_completed');
+			$artobj->medium_values	= Input::get('medium_values');
+			$artobj->commission_id	= Input::get('commission_id');
+			$artobj->tagline			= Input::get('tagline');
+			$artobj->save();
+		
+			// redirect
+			Session::flash('message', 'Successfully created '.$artobj->name.'!');
+			return Redirect::to('artobjs');
+		}
 	}
 
 	/**
