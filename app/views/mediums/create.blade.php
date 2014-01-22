@@ -9,14 +9,17 @@ $(document).ready(function(){
 
 	<!-- activates add logic -->
     $("#AddButton").click(function(e){
-    	$( ".MediumChars-Add" ).append('<li class="form-group col-sm-4"><label for="mediumchars_name_' + FieldCount + '">Characteristic ' + FieldCount + ':</label><input class="form-control" name="mediumchars_name_' + FieldCount + '" type="text" id="mediumchars_name_' + FieldCount + '"><label for="mediumchars_description_' + FieldCount + '">Characteristic Description:</label><input class="form-control" name="mediumchars_description_' + FieldCount + '" type="text" id="mediumchars_description_' + FieldCount + '"><label for="mediumchars_example_' + FieldCount + '">Example of Characteristic:</label><input class="form-control" name="mediumchars_example_' + FieldCount + '" type="text" id="mediumchars_example_' + FieldCount + '"><a class="btn btn-xs btn-warning" id="KillButton" href="">Remove</a></li>');
+    	$( ".MediumChars-Add" ).append('<li class="form-group col-sm-4 BlueAlertBox" id="MediumCharsSection_' + FieldCount + '"><label for="mediumchars_name_' + FieldCount + '">Characteristic ' + FieldCount + ':</label><input class="form-control" name="mediumchars_name_' + FieldCount + '" type="text" id="mediumchars_name_' + FieldCount + '"><label for="mediumchars_description_' + FieldCount + '">Characteristic Description:</label><input class="form-control" name="mediumchars_description_' + FieldCount + '" type="text" id="mediumchars_description_' + FieldCount + '"><label for="mediumchars_example_' + FieldCount + '">Example of Characteristic:</label><input class="form-control" name="mediumchars_example_' + FieldCount + '" type="text" id="mediumchars_example_' + FieldCount + '"><br /></li>');
     		FieldCount++;
     return false;
     });
     <!-- activates remove logic -->
-    $("body").on("click","#KillButton", function(e){
-    	$(this).parent('li').remove();
+    $("#KillButton").click(function(e){
     	FieldCount --;
+    	$("#MediumCharsSection_" + FieldCount ).remove();
+    	if (FieldCount < 1) {
+    		FieldCount = 1;
+    	}
     	return false;
     });
 });
@@ -44,18 +47,20 @@ $(document).ready(function(){
 
 		<li>
 			<a class="btn btn-small btn-info" id="AddButton" href="#anchor">Add Characteristic</a>
+			<a class="btn btn-small btn-warning" id="KillButton" href="">Remove Characteristic</a>
 		</li>
-
+		<br />
 		<div class="MediumChars-Add row">
-		<li class='form-group col-sm-4'>
-			{{ Form::label('mediumchars_name_01', 'Characteristic:') }}
-			{{ Form::text('mediumchars_name_01', Input::old('mediumchars_name_01'), array('class' => 'form-control')) }}
+		<li class='form-group col-sm-4 BlueAlertBox'>
+			{{ Form::label('mediumchars_name_0', 'Characteristic:') }}
+			{{ Form::text('mediumchars_name_0', Input::old('mediumchars_name_0'), array('class' => 'form-control')) }}
 
-			{{ Form::label('mediumchars_description_01', 'Characteristic Description:') }}
-			{{ Form::text('mediumchars_description_01', Input::old('mediumchars_description_01'), array('class' => 'form-control')) }}
+			{{ Form::label('mediumchars_description_0', 'Characteristic Description:') }}
+			{{ Form::text('mediumchars_description_0', Input::old('mediumchars_description_0'), array('class' => 'form-control')) }}
 
-			{{ Form::label('mediumchars_example_01', 'Example of Characteristic:') }}
-			{{ Form::text('mediumchars_example_01', Input::old('mediumchars_example_01'), array('class' => 'form-control')) }}
+			{{ Form::label('mediumchars_example_0', 'Example of Characteristic:') }}
+			{{ Form::text('mediumchars_example_0', Input::old('mediumchars_example_0'), array('class' => 'form-control')) }}
+			<br />
 		</li>
 		<a name="anchor"></a>
 		</div>
