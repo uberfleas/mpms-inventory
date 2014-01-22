@@ -33,4 +33,10 @@ class Medium extends Eloquent {
 	{
 		return $this->hasMany('Arttype');
 	}
+
+	//defines relationships to mediumchars table
+	public function mediumchar()
+	{
+		return $this->hasMany('Mediumchar');
+	}
 }

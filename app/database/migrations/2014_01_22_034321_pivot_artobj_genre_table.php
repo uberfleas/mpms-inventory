@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class PivotGenreMediumTable extends Migration {
+class PivotArtobjGenreTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,12 @@ class PivotGenreMediumTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('genre_medium', function(Blueprint $table) {
+		Schema::create('artobj_genre', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('artobj_id')->unsigned()->index();
 			$table->integer('genre_id')->unsigned()->index();
-			$table->integer('medium_id')->unsigned()->index();
+			$table->foreign('artobj_id')->references('id')->on('artobjs')->onDelete('cascade');
 			$table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
-			$table->foreign('medium_id')->references('id')->on('mediums')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +30,7 @@ class PivotGenreMediumTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('genre_medium');
+		Schema::drop('artobj_genre');
 	}
 
 }

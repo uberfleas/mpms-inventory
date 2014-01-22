@@ -1,6 +1,10 @@
 @extends('layouts.default')
 @section('content')
 	<h1>All the Art Objects</h1>
+
+	<a class="btn btn-small btn-success" href="{{ URL::to('artobjs/create') }}">
+	<span class="glyphicon glyphicon-plus"></span> Add Artobj</a>
+
 	
 	<table class="table table-striped table-bordered">
 		<thead>

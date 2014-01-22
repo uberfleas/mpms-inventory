@@ -37,6 +37,12 @@
 			return $this->hasMany('Artinv');
 		}
 
+		//adds relationship to artobjchars
+		public function artobjchar()
+		{
+			return $this->hasMany('Artobjchar');
+		}
+
 	}
 	
 ?>
