@@ -8,8 +8,7 @@ class Medium extends Eloquent {
 
 	public static $rules = array(
 		'name' 				=> 'required|unique:mediums',
-		'description'		=> 'required',
-		'characteristics'	=> 'required'
+		'description'		=> 'required'
 	);
 
 	//---Inverse Relationship Definitions

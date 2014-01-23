@@ -23,8 +23,6 @@ $(document).ready(function(){
 		</li>
 
 		<li class="form-group">
-
-			{{ ArtobjHelper::putMediumList() }}
 			
 			<a class="btn btn-small btn-info" href="{{ URL::to('mediums/create') }}">Add Medium</a>
 			<a class="btn btn-small btn-primary" href="{{ URL::to('mediums/edit') }}">Edit Medium</a>
@@ -45,11 +43,6 @@ $(document).ready(function(){
 		<li class="form-group">
 			{{ Form::label('date_completed', 'Date completed:') }}
 			{{ Form::text('date_completed', Input::old('date_completed'), array('class' => 'form-control')) }}
-		</li>
-
-		<li class="form-group">
-			{{ Form::label('medium_values', 'Medium values:') }}
-			{{ Form::textarea('medium_values', Input::old('medium_values'), array('class' => 'form-control')) }}
 		</li>
 
 		<li class="form-group">

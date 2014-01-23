@@ -26,3 +26,6 @@ Route::resource('mediums', 'MediumController');
 
 //Genre Route
 Route::resource('genres', 'GenreController');
+
+//Mediumchar Route
+Route::resource('mediumchars', 'MediumcharController');
