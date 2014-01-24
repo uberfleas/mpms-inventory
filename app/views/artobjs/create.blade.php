@@ -1,15 +1,6 @@
 @extends('layouts.default')
 @section('content')
 
-<!-- script for collapsible elements -->
-<script type="text/javascript">
-$(document).ready(function(){
-    $(".mytoggle").click(function(){
-        $("#toggleDemo").collapse('toggle');
-    });
-});
-</script>
-
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
@@ -27,18 +18,18 @@ $(document).ready(function(){
 			<a class="btn btn-small btn-info" href="{{ URL::to('mediums/create') }}">Add Medium</a>
 			<a class="btn btn-small btn-primary" href="{{ URL::to('mediums/edit') }}">Edit Medium</a>
 
-			<div class="panel-group" id="accordion">
-  				{{ ArtobjHelper::collapseHeader('Testing','One') }}
-  				{{ ArtobjHelper::collapseContent('This is a test of some stuff','One') }}
-
-  				{{ ArtobjHelper::collapseHeader('Moo!','Two') }}
-  				{{ ArtobjHelper::collapseContent('This is a test of some stuff','Two') }}
-
-  				{{ ArtobjHelper::collapseHeader('Cheese','Three') }}
-  				{{ ArtobjHelper::collapseContent('This is a test of some stuff','Three') }}
-  
-			</div>
 		</li>
+
+		<div class="form-group" id="accordion">
+
+		<?php foreach (ArtobjHelper::getMediumcharArray() as $name_and_desc => $chars_array) { ?>
+
+      		<?php $collapse_content = ArtobjHelper::makeCollapseContent($chars_array); ?>
+      		{{ ArtobjHelper::mediumsCollapse($name_and_desc,$chars_array[0]['medium_id'],$collapse_content) }}
+	
+		<?php } ?>
+
+		</div>
 
 		<li class="form-group">
 			{{ Form::label('date_completed', 'Date completed:') }}
@@ -62,5 +53,14 @@ $(document).ready(function(){
 {{ Form::close() }}
 
 </div>
+
+<!-- script for collapsible elements -->
+<script type="text/javascript">
+$(document).ready( function(){
+	$("a#medium_radio_toggle").click( function() {
+		$(this).siblings("input[type=radio]").prop("checked", true);
+	});
+});
+</script>
 
 @stop
