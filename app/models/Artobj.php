@@ -2,6 +2,12 @@
 	
 	class Artobj extends Eloquent
 	{
+		public static $rules = array(
+			'name'       	=> 'required',
+			'medium_id'  	=> 'required|numeric',
+			'date_completed'=> 'required|date_format:m-d-Y',
+			'commission_id'	=> 'numeric'
+		);
 
 		//---Inverse Relationship Definitions
 
@@ -20,7 +26,7 @@
 		//adds relationship to genres
 		public function genre()
 		{
-			return $this->belongsToMany('Genre','genres_artobjs','genre_id','artobj_id');
+			return $this->belongsToMany('Genre','artobj_genre','artobj_id','genre_id');
 		}
 
 		//---Relationship Definitions
