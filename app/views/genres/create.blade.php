@@ -5,19 +5,19 @@
 {{ HTML::ul($errors->all()) }}
 
 {{ Form::open(array('route' => 'genres.store')) }}
-	<ul>
-		<li>
+	<ul class="list-unstyled col-sm-4">
+		<li class="form-group">
 			{{ Form::label('name', 'Name:') }}
-			{{ Form::text('name') }}
+			{{ Form::text('name', Input::old('name'), array('class' => 'form-control')) }}
 		</li>
 
-		<li>
+		<li class="form-group">
 			{{ Form::label('description', 'Description:') }}
-			{{ Form::textarea('description') }}
+			{{ Form::textarea('description', Input::old('description'), array('class' => 'form-control')) }}
 		</li>
 
 		<li>
-			{{ Form::submit() }}
+			{{ Form::submit('Add Genre', array('class' => 'btn btn-primary')) }}
 		</li>
 	</ul>
 {{ Form::close() }}

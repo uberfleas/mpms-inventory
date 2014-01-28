@@ -2,8 +2,8 @@
 @section('content')
 
 	<!-- set vars to use to easily reuse this code -->
-	{{--*/ $model_name='Medium'; /*--}}
-	{{--*/ $table_name='mediums'; /*--}}
+	{{--*/ $model_name='Customer'; /*--}}
+	{{--*/ $table_name='customers'; /*--}}
 	<!-- end set vars -->
 
 	<h1>All the {{ $model_name }}s</h1>
@@ -16,17 +16,21 @@
 			<tr>
 				<td>ID</td>
 				<td>Name</td>
-				<td>Description</td>
-				<td>Characteristics</td>
+				<td>Address</td>
+				<td>Phone</td>
+				<td>Email</td>
+				<td>First Contact</td>
 			</tr>
 		</thead>
 		<tbody>
 		@foreach(${$table_name} as $key => $value)
 			<tr>
 				<td>{{ $value->id }}</td>
-				<td>{{ $value->name }}</td>
-				<td>{{ $value->description }}</td>
-				<td>{{ $value->characteristics }}</td>
+				<td>{{ $value->fname }} {{ $value->lname }}</td>
+				<td>{{ $value->street }}, {{ $value->city }}, {{ $value->state }}, {{ $value->zip }}</td>
+				<td>{{ $value->phone }}</td>
+				<td>{{ $value->email }}</td>
+				<td>{{ $value->show_id }}</td>
 				<!-- adding show edit and delete buttons -->
 				<td>
 					

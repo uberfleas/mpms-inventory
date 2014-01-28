@@ -27,5 +27,11 @@ Route::resource('mediums', 'MediumController');
 //Genre Route
 Route::resource('genres', 'GenreController');
 
-//Mediumchar Route
-Route::resource('mediumchars', 'MediumcharController');
+//Event Route
+Route::resource('shows', 'ShowController');
+
+//Commission Route
+Route::resource('commissions','CommissionController');
+
+//Customer Route
+Route::resource('customers','CustomerController');

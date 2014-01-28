@@ -7,6 +7,9 @@
 	<!-- end set vars -->
 
 	<h1>All the {{ $model_name }}s</h1>
+
+	<a class="btn btn-small btn-success" href="{{ URL::to($table_name.'/create') }}">
+	<span class="glyphicon glyphicon-plus"></span> Add {{ $model_name }}</a>
 	
 	<table class="table table-striped table-bordered">
 		<thead>

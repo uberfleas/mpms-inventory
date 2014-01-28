@@ -2,8 +2,8 @@
 @section('content')
 
 	<!-- set vars to use to easily reuse this code -->
-	{{--*/ $model_name='Medium'; /*--}}
-	{{--*/ $table_name='mediums'; /*--}}
+	{{--*/ $model_name='Show'; /*--}}
+	{{--*/ $table_name='shows'; /*--}}
 	<!-- end set vars -->
 
 	<h1>All the {{ $model_name }}s</h1>
@@ -16,8 +16,8 @@
 			<tr>
 				<td>ID</td>
 				<td>Name</td>
-				<td>Description</td>
-				<td>Characteristics</td>
+				<td>Location</td>
+				<td>Schedule</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,8 +25,8 @@
 			<tr>
 				<td>{{ $value->id }}</td>
 				<td>{{ $value->name }}</td>
-				<td>{{ $value->description }}</td>
-				<td>{{ $value->characteristics }}</td>
+				<td>{{ $value->city }},{{ $value->state }}</td>
+				<td>{{ $value->start_date }} to {{ $value->end_date }}</td>
 				<!-- adding show edit and delete buttons -->
 				<td>
 					

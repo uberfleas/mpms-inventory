@@ -25,8 +25,8 @@ $(document).ready( function(){
 
 		<li class="form-group">
 			
-			<a class="btn btn-small btn-info" href="{{ URL::to('mediums/create') }}">Add Medium</a>
-			<a class="btn btn-small btn-primary" href="{{ URL::to('mediums/edit') }}">Edit Medium</a>
+			<a class="btn btn-small btn-info popup" href="{{ URL::to('mediums/create') }}">Add Medium</a>
+			<a class="btn btn-small btn-primary popup" href="{{ URL::to('mediums/edit') }}">Edit Medium</a>
 
 		</li>
 
@@ -61,8 +61,8 @@ $(document).ready( function(){
 
 		<li class="form-group">
 			
-			<a class="btn btn-small btn-info" href="{{ URL::to('genres/create') }}">Add Genre</a>
-			<a class="btn btn-small btn-primary" href="{{ URL::to('genres/edit') }}">Edit Genre</a>
+			<a class="btn btn-small btn-info popup" href="{{ URL::to('genres/create') }}">Add Genre</a>
+			<a class="btn btn-small btn-primary popup" href="{{ URL::to('genres/edit') }}">Edit Genre</a>
 
 		</li>
 

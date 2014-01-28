@@ -1,0 +1,27 @@
+- urgent change
+> longterm change
++ optional change
+? questions
+= completed
+
+Changes Needed:
+
+-artobj create date_completed needs dropdowns for each date piece
+-catch exception in artobj create when no radio button is selected or make a radio button selected by default
+-add medium, edit medium, add genre, edit genre need to pop open a new window
+-add delete button and confirmation to medium, artobj, and genre
+-add + button to medium and genre index
+-automatically add an entry to the artinv table for the artobj added
+-add a checkbox to artobj creation to flag the original as 'for sale' or 'sold'
+
+
+>Double-check validations for medium, genre and artobj. Possibly add some custom ones.
+>look into adding a unit selector for dimension units in mediumchars
+
++spell checker class for all fields?
+
+<----------------------------------------------------------------->
+
+=add a field to customer table that refers to the show table
+
+
