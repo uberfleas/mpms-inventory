@@ -2,7 +2,7 @@
 <meta name="description" content="MPMS Inventory">
 <meta name="author" content="Uberfleas">
 
-<title>Super Cool Layouts</title>
+<title>Mud Puddle Moon Studio Inventory</title>
 
 <!-- load bootstrap and jquery from a cdn -->
 <link rel="stylesheet" href="///netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">

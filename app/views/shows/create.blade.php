@@ -41,4 +41,6 @@
 	</ul>
 {{ Form::close() }}
 
+</div><!-- .col-sm-8 -->
+
 @stop

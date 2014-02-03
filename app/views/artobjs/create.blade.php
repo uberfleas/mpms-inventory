@@ -80,6 +80,6 @@ $(document).ready( function(){
 	</ul>
 {{ Form::close() }}
 
-</div>
+</div><!-- .col-sm-8 -->
 
 @stop

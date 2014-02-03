@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('pages.home');
-});
+//Login Route
+Route::any("/", [
+	"as"	=> "users/login",
+	"uses"	=> "UserController@loginAction"
+]);
+
+
 
 //--- Routes for the Art Object Set
 
@@ -35,3 +38,6 @@ Route::resource('commissions','CommissionController');
 
 //Customer Route
 Route::resource('customers','CustomerController');
+
+//User Route
+Route::resource('users','UserController');

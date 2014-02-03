@@ -1,6 +1,7 @@
 <div class="navbar">
 	<div class="navbar-inner">
 		<ul class="nav nav-pills">
+			<li><a href="/users">Users</a></li>
 			<li><a href="/shows">Shows</a></li>
 			<li><a href="/customers">Customers</a></li>
 			<li><a href="/commissions">Commissions</a></li>
