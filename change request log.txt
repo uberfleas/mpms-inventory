@@ -13,6 +13,8 @@ Changes Needed:
 -add + button to medium and genre index
 -automatically add an entry to the artinv table for the artobj added
 -add a checkbox to artobj creation to flag the original as 'for sale' or 'sold'
+-Completion date of Commissions table auto-filled when artobj is attached to that commission
+
 
 
 >Double-check validations for medium, genre and artobj. Possibly add some custom ones.

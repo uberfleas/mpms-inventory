@@ -27,12 +27,12 @@
 
 		<li class="form-group">
 			{{ Form::label('password', 'Password:') }}
-			{{ Form::password('password', Input::old('password'), array('class' => 'form-control' )) }}
+			{{ Form::password('password', array('class' => 'form-control' )) }}
 		</li>
 
 		<li class="form-group">
 			{{ Form::label('password_confirmation', 'Password Confirmation:') }}
-			{{ Form::password('password_confirmation', Input::old('password_confirmation'), array('class' => 'form-control' )) }}
+			{{ Form::password('password_confirmation', array('class' => 'form-control' )) }}
 		</li>
 
 		<li class="form-group">
