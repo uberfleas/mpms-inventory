@@ -1,0 +1,332 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"options",
+				"optionsRadios1"
+			],
+			[
+				"is",
+				"is_array"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"MediumCh",
+				"MediumCharsSection_"
+			],
+			[
+				"sm",
+				"col-sm-4"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"medium",
+				"medium"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"selected_items":
+		[
+			[
+				"gist",
+				"Gist: Create Public Gist"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"toggle mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/routes.php",
+		"/Users/uberfleas/Library/Application Support/Sublime Text 3/Packages/User/Gist.sublime-settings",
+		"/Users/uberfleas/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
+		"/Users/uberfleas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/uberfleas/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/uberfleas/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ReadOnlyException.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/readme.md",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/users/show.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/shows/show.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/shows/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/show.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/hello.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/laravel/framework/src/Illuminate/View/Environment.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/config/view.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/lang/en/validation.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/filters.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/users/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/users/edit.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/symfony/finder/Symfony/Component/Finder/Expression/ValueInterface.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/predis/predis/lib/Predis/Command/SetIsMember.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/users/login.blade.php",
+		"/Users/uberfleas/Sites/mpms-inventory/app/routes.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/ArtobjController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/CommissionController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/CustomerController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/MediumController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/ShowController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/UserController.php",
+		"/Users/uberfleas/Sites/mpms-inventory/bootstrap/start.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/includes/head.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/users/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/includes/footer.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/mediums/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/genres/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/customers/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/commissions/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/artobjs/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/includes/header.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/shows/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/User.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_28_013814_CreateUserTable.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/shows/edit.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Commission.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/library/FormHelper.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/FailedToOpenException.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_202858_add_state_column_customers.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/customers/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/library/CommissionHelper.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/public/packages/js/custom.js",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/commissions/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_171514_fix_customers_show_column.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_171452_fix_commissions_show_column.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/events/create.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/layouts/default.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Customer.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/genres/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/mediums/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Show.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/events/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_032215_create_shows_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Event.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_003238_create_events_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_002745_add_event_field_to_commissions.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_27_002720_add_event_field_to_customers.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_20_003356_create_artobjs_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_26_024701_create_commissions_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_26_024634_create_customers_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Artobjchar.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Genre.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Artobj.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/library/ArtobjHelper.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/library/MediumHelper.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/MediumcharController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Mediumchar.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/models/Medium.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/public/packages/js/AddFunctions.js",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/public/packages/css/main.css",
+		"/Users/uberfleas/Sites/nettuts-auth-tut/app/views/layouts/main.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_22_034415_drop_table_genres_mediums.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_22_033457_drop_characteristics_artobjs.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_22_033922_drop_characteristics_mediums.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_22_013928_create_mediumchars_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_22_014136_create_artobjchars_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/views/artobjs/index.blade.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/composer.json",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/GenreController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/controllers/HomeController.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_21_010359_pivot_genre_medium_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_21_003641_create_medium_table.php",
+		"/Users/uberfleas/Sites/mpms-inv-pagoda/app/database/migrations/2014_01_21_003709_create_genre_table.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Route",
+			"customer",
+			"show",
+			"event"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"commission",
+			"customer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "mpms-inv.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"/view/show/show",
+				"app/views/shows/show.blade.php"
+			],
+			[
+				"view/users/show",
+				"app/views/users/show.blade.php"
+			],
+			[
+				"formbuild",
+				"vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
