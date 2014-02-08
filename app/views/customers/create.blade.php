@@ -24,7 +24,7 @@
 			<a class="btn btn-small btn-info popup" id="AddButton" target="_blank" href="/shows/create">Add Show</a>
 			<br />
 			{{ Form::label('show_id', 'Select First Contact Event (Optional):') }}
-			{{ FormHelper::getDDBoxByArray(Show::all(),array('name','state'),'show_id') }}</div>
+			{{ FormHelper::getDDBoxByArray(Show::all(),array('name','state'),'show_id','') }}</div>
 		</li>
 
 		<div class="clearfix"></div><br />

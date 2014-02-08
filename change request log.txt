@@ -6,24 +6,37 @@
 
 Changes Needed:
 
--artobj create date_completed needs dropdowns for each date piece
--catch exception in artobj create when no radio button is selected or make a radio button selected by default
--add medium, edit medium, add genre, edit genre need to pop open a new window
--add delete button and confirmation to medium, artobj, and genre
--add + button to medium and genre index
--automatically add an entry to the artinv table for the artobj added
--add a checkbox to artobj creation to flag the original as 'for sale' or 'sold'
--Completion date of Commissions table auto-filled when artobj is attached to that commission
+-ArtObjHelper: showGenreCheckbox altereed to be a function of FormHelper and generalized
+-ArtObjHelper: mediumsCollapse moved to CollapseHelper and generalized
+-ArtObjHelper: makeCollapseContent moved to CollapseHelper and generalized
+-ArtObjHelper: prepArtobjArray and prepMediumArray need to be combined into a superclass and then inherited out if necessary
+-ArtObjHelper: re-examine mediumCharsArray and its purpose
+-add edit fuctionality to all current tables
+-add delete button and confirmation to current tables
+-add delete functionality to all current tables
+-add tables and CRUD for art inv and supporting tables
+-add tables and CRUD for addon inv and supporting tables
+-add tables and CRUD for payment and sales tables
+-polish pass for indexes
+-add show function for all tables
+-polish pass for add forms
+-polish pass for edit forms
+-add image upload functionality
 
+>ArtObjHelper: rethink function structure with view to reusing code
+>ArtObj: create date_completed needs dropdowns for each date piece
+>automatically add an entry to the artinv table for the artobj added
+>add a checkbox to artobj creation to flag the original as 'for sale' or 'sold'
+>Completion date of Commissions table auto-filled when artobj is attached to that commission
 
++Double-check validations for medium, genre and artobj. Possibly add some custom ones.
++look into adding a unit selector for dimension units in mediumchars
 
->Double-check validations for medium, genre and artobj. Possibly add some custom ones.
->look into adding a unit selector for dimension units in mediumchars
-
-+spell checker class for all fields?
-
+?spell checker class for all fields?
 <----------------------------------------------------------------->
 
 =add a field to customer table that refers to the show table
-
+=add medium, edit medium, add genre, edit genre need to pop open a new window
+=ArtOjb: catch exception in create when no radio button is selected or make a radio button selected by default
+=add + button to medium and genre index
 

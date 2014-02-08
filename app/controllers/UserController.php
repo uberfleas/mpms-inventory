@@ -132,7 +132,12 @@ class UserController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('users.edit');
+        // get the user
+		$user = User::find($id);
+
+		// user the edit form and pass the nerd
+		return View::make('users.edit')
+			->with('user', $user);
 	}
 
 	/**
@@ -143,7 +148,29 @@ class UserController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// validate
+		$validator = Validator::make(Input::all(), User::$edit_rules);
+		
+		// process the login
+		if ($validator->fails()) {
+			return Redirect::to('users/'.$id.'/edit')
+				->withErrors($validator)
+				->withInput(Input::all());
+		} else {
+			// store
+			$user = User::find($id);
+			$user->fname       		= Input::get('fname');
+			$user->lname 			= Input::get('lname');
+			$user->email 			= Input::get('email');
+			if (Input::get('password') != '') {
+				$user->password 	= Hash::make(Input::get('password'));
+			}
+			$user->save();
+		
+			// redirect
+			Session::flash('message', 'Successfully updated '.$user->fname.' '.$user->lname.'!');
+			return Redirect::to('users');
+		}
 	}
 
 	/**

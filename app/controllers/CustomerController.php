@@ -90,7 +90,12 @@ class CustomerController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('customers.edit');
+        // get the customer
+		$customer = Customer::find($id);
+
+		// customer the edit form and pass the nerd
+		return View::make('customers.edit')
+			->with('customer', $customer);
 	}
 
 	/**

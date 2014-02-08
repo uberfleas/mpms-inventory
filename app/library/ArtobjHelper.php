@@ -1,7 +1,10 @@
 <?php
 
 class ArtobjHelper {
-
+  /**
+   * This function grabs an array from the mediums table and returns an array of all the characteristics associated with that medium
+   * @return array
+   */
   static function getMediumcharArray() {
     //pull mediums from Medium
     $mediums = Medium::all();
@@ -23,6 +26,13 @@ class ArtobjHelper {
     return $mediumchars;
   }
 
+  /**
+   * This function creates a collapse based on bootstrap and jquery based on one medium $id
+   * @param  string   $name_and_desc
+   * @param  integer  $medium_id
+   * @param  array    $collapse_content
+   * @return string
+   */
   static function mediumsCollapse($name_and_desc,$medium_id,$collapse_content) {
     //this function will spit out a collapse section based on medium information
     //Beginning of the html for the collapse
@@ -58,7 +68,11 @@ class ArtobjHelper {
     //jettison return pod
     return $return;
   }
-
+  /**
+   * This function handles each individual character for a medium collapse, spits out the whole list of em
+   * @param  array $medium_char_set
+   * @return string
+   */
   static function makeCollapseContent($medium_char_set) {
     //this function spits out the innards of a collapse form for the artobjs
     $beginning = '<div class="form-group">
@@ -96,7 +110,11 @@ class ArtobjHelper {
     //eject it into space
     return $return;
   }
-
+  /**
+   * this shows the html for each retrieved genre
+   * @param  array $genres_array
+   * @return string
+   */
   static function showGenreCheckbox($genres_array) {
     //this function will spit out a set of checkboxes relating to all previously entered genres
     
@@ -131,7 +149,11 @@ class ArtobjHelper {
     //jettison pod
     return $return;
   }
-
+  /**
+   * Prepares the Input::all() array to have each set of information sent to its appropriate array and hence it's own destination table
+   * @param  array $array
+   * @return array
+   */
   static function prepArtobjArray($array) {
     //this function takes an Input::all() array and sorts it
 
@@ -139,7 +161,10 @@ class ArtobjHelper {
     if(!is_array($array)) {
       throw new \Exception('ArtobjHelper says: I asked for an array and I did not get one.');
     }
-
+    //make sure that there is an entry for $array['medium_id'] in case user didn't select one to prevent errors
+    if (!array_key_exists('medium_id', $array)) {
+      $array['medium_id'] = '';
+    }
     //make our destination arrays for sorting
     $artobj_array = array();
     $artobjchars_array = array();

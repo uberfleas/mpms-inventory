@@ -4,8 +4,10 @@
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
+<div class="col-sm-8">
+
 {{ Form::open(array('route' => 'genres.store')) }}
-	<ul class="list-unstyled col-sm-4">
+	<ul class="list-unstyled col-sm-6">
 		<li class="form-group">
 			{{ Form::label('name', 'Name:') }}
 			{{ Form::text('name', Input::old('name'), array('class' => 'form-control')) }}

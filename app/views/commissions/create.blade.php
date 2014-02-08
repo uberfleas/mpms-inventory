@@ -50,7 +50,7 @@
 		<a class="btn btn-small btn-info popup" id="AddButton" target="_blank" href="/shows/create">Add Show</a>
 			<br />
 			{{ Form::label('show_id', 'Select a Show (Optional):') }}
-			{{ FormHelper::getDDBoxByArray(Show::all(),array('name','state'),'show_id') }}
+			{{ FormHelper::getDDBoxByArray(Show::all(),array('name','state'),'show_id','') }}
 		</li>
 
 		<li class="form-group">
