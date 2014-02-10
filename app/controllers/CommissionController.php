@@ -52,7 +52,7 @@ class CommissionController extends BaseController {
 				->withInput(Input::all());
 		} else {
 			// store
-			$commission = new commission;
+			$commission = new Commission;
 			$commission->customer_id      	= Input::get('customer_id');
 			$commission->start_date 		= Input::get('start_date');
 			$commission->est_end_date 		= Input::get('est_end_date');
@@ -89,7 +89,12 @@ class CommissionController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('commissions.edit');
+        // get the commission
+		$commission = Commission::find($id);
+
+		// commission the edit form and pass the nerd
+		return View::make('commissions.edit')
+			->with('commission', $commission);
 	}
 
 	/**
@@ -100,7 +105,32 @@ class CommissionController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// validate
+		$validator = Validator::make(Input::all(), Commission::$rules);
+		
+		// process the login
+		if ($validator->fails()) {
+			return Redirect::to('commissions/'.$id.'/edit')
+				->withErrors($validator)
+				->withInput(Input::all());
+		} else {
+			// store
+			$commission = Commission::find($id);
+			$commission->customer_id      	= Input::get('customer_id');
+			$commission->start_date 		= Input::get('start_date');
+			$commission->est_end_date 		= Input::get('est_end_date');
+			$commission->estimate 			= Input::get('estimate');
+			$commission->notes 	 			= Input::get('notes');
+			$commission->sources  			= Input::get('sources');
+			$commission->sale_status 		= Input::get('sale_status');
+			$commission->show_id 	 		= Input::get('show_id');
+			
+			$commission->save();
+		
+			// redirect
+			Session::flash('message', 'Successfully updated the commission request!');
+			return Redirect::to('commissions');
+		}
 	}
 
 	/**

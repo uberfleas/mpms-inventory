@@ -106,7 +106,33 @@ class CustomerController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// validate
+		$validator = Validator::make(Input::all(), Customer::$rules);
+		
+		// process the login
+		if ($validator->fails()) {
+			return Redirect::to('customers/'.$id.'/edit')
+				->withErrors($validator)
+				->withInput(Input::all());
+		} else {
+			// store
+			$customer = Customer::find($id);
+			$customer->fname       		= Input::get('fname');
+			$customer->lname 			= Input::get('lname');
+			$customer->street 			= Input::get('street');
+			$customer->city 			= Input::get('city');
+			$customer->state 			= Input::get('state');
+			$customer->zip 				= Input::get('zip');
+			$customer->email 	 		= Input::get('email');
+			$customer->phone 			= Input::get('phone');
+			$customer->show_id			= Input::get('show_id');
+			
+			$customer->save();
+		
+			// redirect
+			Session::flash('message', 'Successfully updated '.$customer->fname.' '.$customer->lname.'!');
+			return Redirect::to('customers');
+		}
 	}
 
 	/**
